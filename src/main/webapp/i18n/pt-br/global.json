@@ -48,9 +48,9 @@
         "messages": {
             "info": {
                 "authenticated": {
-                    "prefix": "Para ",
+                    "prefix": "Clique para ",
                     "link": "entrar",
-                    "suffix": ", utilize as seguintes contas padrões:<br/>- Administrador (usuário=\"admin\" and senha=\"admin\") <br/>- Usuário (usuário=\"user\" and senha=\"user\")."
+                    "suffix": "."
                 },
                 "register": {
                     "noaccount": "Não possui uma conta ainda?",
