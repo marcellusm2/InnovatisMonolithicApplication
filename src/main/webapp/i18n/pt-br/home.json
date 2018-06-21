@@ -1,6 +1,6 @@
 {
     "home": {
-        "title": "Bem vindo",
+        "title": "Bem vindo!",
         "subtitle": "",
         "logged": {
             "message": "Você está logado como \"{{username}}\"."
