@@ -1,5 +1,5 @@
 # InnovatisMonolithicApplication
-Aplicação exemplo utilizando Angular6 + Spring Boot + MySQL.
+Sample application using Angular6 + Spring Boot + MySQL.
 
 ## Development
 
