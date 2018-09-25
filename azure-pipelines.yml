@@ -20,7 +20,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'sonar:sonar' # Optional
+    goals: 'compile sonar:sonar' # Optional
     options: '-Dsonar.projectKey=marcellusm2_InnovatisMonolithicApplication -Dsonar.organization=marcellusm2-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=12d42224f837d76a09dd3341f2b29451e05abcb5' # Optional
 - task: ShellScript@2
   inputs:
