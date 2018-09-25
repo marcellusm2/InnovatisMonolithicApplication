@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="employee">
+            <h2><span jhiTranslate="innovatisMonolithicApplicationApp.employee.detail.title">Employee</span> {{employee.id}}</h2>
+            <hr>
+            <-alert-error></-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.firstName" [ngbTooltip]="'innovatisMonolithicApplicationApp.employee.help.firstName' | translate">First Name</span></dt>
+                <dd>
+                    <span>{{employee.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{employee.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.nickName">Nick Name</span></dt>
+                <dd>
+                    <span>{{employee.nickName}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.email">Email</span></dt>
+                <dd>
+                    <span>{{employee.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{employee.phoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.birthDate">Birth Date</span></dt>
+                <dd>
+                    <span>{{employee.birthDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.hireDate">Hire Date</span></dt>
+                <dd>
+                    <span>{{employee.hireDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.salary">Salary</span></dt>
+                <dd>
+                    <span>{{employee.salary}}</span>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.department">Department</span></dt>
+                <dd>
+                    <div *ngIf="employee.department">
+                        <a [routerLink]="['/department', employee.department?.id, 'view']">{{employee.department?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="innovatisMonolithicApplicationApp.employee.manager">Manager</span></dt>
+                <dd>
+                    <div *ngIf="employee.manager">
+                        <a [routerLink]="['/employee', employee.manager?.id, 'view']">{{employee.manager?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/employee', employee.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
