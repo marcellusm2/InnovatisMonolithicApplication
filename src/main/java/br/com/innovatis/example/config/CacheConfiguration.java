@@ -38,6 +38,18 @@ public class CacheConfiguration {
             cm.createCache(br.com.innovatis.example.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.innovatis.example.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(br.com.innovatis.example.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Region.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Country.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Department.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Department.class.getName() + ".employees", jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Task.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Task.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Employee.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Job.class.getName(), jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.Job.class.getName() + ".tasks", jcacheConfiguration);
+            cm.createCache(br.com.innovatis.example.domain.JobHistory.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
